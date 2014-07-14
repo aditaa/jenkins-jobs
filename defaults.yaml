@@ -1,0 +1,23 @@
+- defaults:
+    name: global
+    description: 'Do not edit this job through the web!'
+    disabled: false
+    concurrent: true
+    block-downstream: false
+    block-upstream: false
+    project-type: freestyle
+    publishers:
+      - ircbot:
+          strategy: all
+          notify-start: true
+          notify-committers: false
+          notify-culprits: false
+          notify-upstream: false
+          notify-fixers: false
+          message-type: summary-scm
+          channels:
+              - name: '#aditaa'
+                notify-only: false
+              - name: '#ig2ad.com'
+                notify-only: true
+          matrix-notifier: only-configurations
