@@ -1,17 +1,13 @@
 - defaults:
     name: global
     description: |
-      <p><b>This job is managed by Jenkins and will be overwritten.</b></p>
+      This job is managed by Jenkins and will be overwritten.
 
-      <p><b>Do not edit this job through the web</b></p>
+      Do not edit this job through the web
 
-      <p>If you would like to make changes to this job, please see:
+      If you would like to make changes to this job, please see:
 
-        <a href="https://github.com/aditaa/jenkins-jobs">
-          https://github.com/aditaa/jenkins-jobs
-        </a>
-
-      </p>
+      https://github.com/aditaa/jenkins-jobs
 
     disabled: false
     concurrent: true
