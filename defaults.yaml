@@ -26,9 +26,9 @@
       - timestamps
 
     logrotate:
-      daysToKeep: 1
+      daysToKeep: -1
       numToKeep: 5
-      artifactDaysToKeep: 1
+      artifactDaysToKeep: -1
       artifactNumToKeep: 3
 
     publishers:
