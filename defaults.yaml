@@ -1,7 +1,7 @@
 - defaults:
     name: global
     description: |
-          <p><b>This job is managed by jenkins and will be overwritten.</b></p>
+      <p><b>This job is managed by Jenkins and will be overwritten.</b></p>
 
       <p><b>Do not edit this job through the web</b></p>
 
