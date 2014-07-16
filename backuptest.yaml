@@ -1,5 +1,6 @@
 - job:
     name: backup-test
+    node: master
     project-type: freestyle
     defaults: global
     disabled: false
@@ -17,19 +18,8 @@
          browser: githubweb
          browser-url: http://github.com/aditaa/jenkins.git
     builders:
-      - shining-panda:
-          build-environment: virtualenv
-          python-version: pypy
-          nature: shell
+      - pypy:
           command: |
             rm -rf ./Backup-*
             python Backup.py $JENKINS_HOME ./
-
-          name: virtvenv1
-          clear: true
-          use-distribute: true
-          system-site-packages: true
-          ignore-exit-code: true
-    
-
 
