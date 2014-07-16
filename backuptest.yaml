@@ -3,12 +3,14 @@
     node: master
     project-type: freestyle
     defaults: global
-    disabled: false
-    concurrent: true
+    disabled: true
+    concurrent: false
     quiet-period: 5
     block-downstream: false
     block-upstream: false
     retry-count: 3
+    triggers:
+      - timed: "H H/12 * * *"
     scm:
       - git:
          url: git@github.com:aditaa/jenkins.git
