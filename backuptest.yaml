@@ -17,9 +17,10 @@
          - origin/master
          browser: githubweb
          browser-url: http://github.com/aditaa/jenkins.git
+         skip-tag: true
+         wipe-workspace: true
+
     builders:
       - pypy:
-          command: |
-            rm -rf ./Backup-*
-            python Backup.py $JENKINS_HOME ./
+          command: "python Backup.py $JENKINS_HOME ./"
 
