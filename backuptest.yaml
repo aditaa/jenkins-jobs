@@ -1,0 +1,35 @@
+- job:
+    name: backup-test
+    project-type: freestyle
+    defaults: global
+    disabled: false
+    concurrent: true
+    quiet-period: 5
+    block-downstream: false
+    block-upstream: false
+    retry-count: 3
+    scm:
+      - git:
+         url: git@github.com:aditaa/jenkins.git
+         credentials-id: a562e95c-a5fc-40ad-9305-effd3dfa0715
+         branches:
+         - origin/master
+         browser: githubweb
+         browser-url: http://github.com/aditaa/jenkins.git
+    builders:
+      - shining-panda:
+          build-environment: virtualenv
+          python-version: pypy
+          nature: shell
+          command: |
+            rm -rf ./Backup-*
+            python Backup.py $JENKINS_HOME ./
+
+          name: virtvenv1
+          clear: true
+          use-distribute: true
+          system-site-packages: true
+          ignore-exit-code: true
+    
+
+
