@@ -26,3 +26,9 @@
       - pypy:
           command: "python Backup.py $JENKINS_HOME ./"
 
+    publishers:
+      - ssh:
+          site: 'black.ig2ad.com'
+          target: 'jenkins'
+          source: '*.tar.gz'
+          fail-on-error: true
